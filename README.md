@@ -1,6 +1,6 @@
 # Chatfy 
 
-Repositório de código do app Chatfy.
+O Chatfy é uma aplicativo de bate papo em tempo real com um streaming de músicas. Os usuários poderam conectar-se com seus amigos ouvindo sua playlist favorita. Tudo pensado em seu divertimento! Venha, baixe logo o seu!
 
 o que é
 
