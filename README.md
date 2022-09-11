@@ -5,7 +5,7 @@ O Chatfy é uma aplicativo de bate papo em tempo real com um streaming de músic
 o que é
 
 ## :art: Design
-O design do site foi criado no Figma. Para acessar o protótipo, [clique aqui](https://figma.com/file/F4AeiLaW8Yi7zr4eCuLtpX/Website).
+O design do site foi criado no Figma. Para acessar o protótipo, [clique aqui](https://www.figma.com/file/NMfhiGasw3XveWVuoIQaUw/Chatfy?node-id=0%3A1).
 
 ![Design](./assets/chatfy.PNG)
 
