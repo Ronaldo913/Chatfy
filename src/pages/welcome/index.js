@@ -1,10 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 export default function Welcome() {
     return (
-        <View>
-            <Text>Tela de Bem-vindo</Text>
+        <View style={styles.container}>
+            <View>
+                <Image 
+                    source={require('../../../assets/logoName.png')}
+                    style={{ width: '100%' }}
+                />
+            </View>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container:{
+
+    }
+})
