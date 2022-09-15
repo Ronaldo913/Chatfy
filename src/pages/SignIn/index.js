@@ -1,71 +1,143 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import * as Animatable from 'react-native-animatable';
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import * as Animatable from "react-native-animatable";
+import logo from "../../assets/logoName.png";
+import { useNavigation } from '@react-navigation/native';
 
 export default function SignIn() {
-    return (
-        <View style={styles.container}>
-            <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-                <Text style={styles.message}>Bem-vindo</Text>
-            </Animatable.View>
+  const navigation = useNavigation();
+  return (
+    <View style={styles.container}>
+      <View style={styles.containerLogo}>
+        <Animatable.Image
+          animation="flipInY"
+          source={logo}
+          style={styles.image}
+          resizeMode="contain"
+        />
+        <Animatable.View
+          animation="fadeInLeft"
+          delay={500}
+          style={styles.containerHeader}
+        >
+          <Text style={styles.message}>Bem-vindo!</Text>
+        </Animatable.View>
+      </View>
 
-            <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Email</Text>
-                <TextInput placeholder="Digite um email..." style={styles.input} />
+      <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
+        <Text style={styles.title}>Email</Text>
+        <TextInput placeholder="Digite um email..." style={styles.input} />
 
-                <Text style={styles.title}>Senha</Text>
-                <TextInput placeholder="Digite uma senha..." style={styles.input} />
+        <Text style={styles.title2}>Senha</Text>
+        <TextInput placeholder="Digite uma senha..." style={styles.input} />
 
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Acessar</Text>
-                </TouchableOpacity>
+        <View style={styles.buttons}>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('HomePage')}>
+            <Text style={styles.buttonText}>Acessar</Text>
+          </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonRegister}>
-                    <Text style={styles.registerText}>Cadastrar</Text>
-                </TouchableOpacity>
-            </Animatable.View>
+          <TouchableOpacity style={styles.buttonRegister}>
+            <Text style={styles.registerText}>Cadastrar</Text>
+          </TouchableOpacity>
         </View>
-    );
+      </Animatable.View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white'
-    },
-    containerHeader: {
-        marginBottom: '8%',
-        marginTop: '14%',
-        paddingStart: '5%'
-    },
-    message: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        color: '#2B0334'
-    },
-    containerForm: {
-        backgroundColor: '#2B0334',
-        flex: 1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        paddingStart: '5%',
-        paddingEnd: '5%'
-    },
-    title: {
-        fontSize: 20,
-        margin: 28,
-        color: 'white'
-    },
-    input: {
-        borderBottomWidth: 1,
-        height: 40,
-        marginBottom: 12,
-        fontSize: 16,
-        color: 'black',
-        backgroundColor: 'white',
-        borderRadius: 16
-    },
-    button: {
-        backgroundColor: '#2b0334'
-    }
-})
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+  containerLogo: {
+    backgroundColor: "white",
+  },
+  containerHeader: {
+    paddingStart: 12
+  },
+  image: {
+    width: "65%",
+    height: 300,
+  },
+  message: {
+    fontSize: 30,
+    fontWeight: "bold",
+    // color: "#2B0363",
+    color: '#2B0334'
+  },
+  containerForm: {
+    backgroundColor: "#2B0334",
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 25,
+    paddingStart: "5%",
+    paddingEnd: "5%",
+    marginTop: "3%",
+    height: "60%",
+    flex: 1,
+  },
+  title: {
+    fontSize: 20,
+    marginTop: 35,
+    marginBottom: 12,
+    color: "white",
+    marginLeft: 5,
+  },
+  title2: {
+    fontSize: 20,
+    marginTop: 15,
+    marginBottom: 12,
+    color: "white",
+    marginLeft: 5,
+  },
+  input: {
+    borderBottomWidth: 1,
+    height: 40,
+    marginBottom: 12,
+    fontSize: 16,
+    color: "black",
+    backgroundColor: "white",
+    borderRadius: 20,
+    paddingHorizontal: 12,
+  },
+  buttons: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flex: 1,
+},
+button: {
+    backgroundColor: "white",
+    borderRadius: 20,
+    width: 150,
+    height: 40,
+    alignSelf: "center",
+    alignItems: "center",
+    paddingVertical: 8,
+    marginHorizontal: 8
+  },
+  buttonRegister: {
+    backgroundColor: "white",
+    borderRadius: 20,
+    width: 150,
+    height: 40,
+    alignSelf: "center",
+    alignItems: "center",
+    paddingVertical: 8,
+  },
+  buttonText: {
+    color: "#2B0334",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  registerText: {
+    color: "#2B0334",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});
