@@ -45,6 +45,17 @@ export default function SignIn() {
           <TouchableOpacity style={styles.buttonRegister}>
             <Text style={styles.registerText}>Cadastrar</Text>
           </TouchableOpacity>
+          
+        </View>
+
+        <View style={styles.buttonsNetwork}>
+          <TouchableOpacity style={styles.buttonNetwork} onPress={ () => navigation.navigate('HomePage')}>
+            <Text style={styles.buttonText}>Nosso site</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.buttonNetwork}>
+            <Text style={styles.registerText}>Instagram</Text>
+          </TouchableOpacity>
         </View>
       </Animatable.View>
     </View>
@@ -79,29 +90,30 @@ const styles = StyleSheet.create({
     paddingStart: "5%",
     paddingEnd: "5%",
     marginTop: "3%",
-    height: "60%",
     flex: 1,
   },
   title: {
-    fontSize: 20,
+    fontSize: 19,
     marginTop: 35,
     marginBottom: 12,
     color: "white",
     marginLeft: 5,
+    fontWeight: 'bold'
   },
   title2: {
-    fontSize: 20,
-    marginTop: 15,
+    fontSize: 19,
+    marginTop: 7,
     marginBottom: 12,
     color: "white",
     marginLeft: 5,
+    fontWeight: 'bold'
   },
   input: {
     borderBottomWidth: 1,
-    height: 40,
+    height: 45,
     marginBottom: 12,
     fontSize: 16,
-    color: "black",
+    color: "grey",
     backgroundColor: "white",
     borderRadius: 20,
     paddingHorizontal: 12,
@@ -109,9 +121,9 @@ const styles = StyleSheet.create({
   buttons: {
     flexDirection: "row",
     justifyContent: "space-between",
-    flex: 1,
-},
-button: {
+    marginTop: 20
+  },
+  button: {
     backgroundColor: "white",
     borderRadius: 20,
     width: 150,
@@ -119,7 +131,6 @@ button: {
     alignSelf: "center",
     alignItems: "center",
     paddingVertical: 8,
-    marginHorizontal: 8
   },
   buttonRegister: {
     backgroundColor: "white",
@@ -139,5 +150,22 @@ button: {
     color: "#2B0334",
     fontSize: 16,
     fontWeight: "bold",
+  },
+  buttonsNetwork: {
+    flexDirection: "column",
+    justifyContent: "space-around",
+    flex: 1,
+    height: '100%',
+    marginTop: '6%'
+  },
+  buttonNetwork: {
+    backgroundColor: "white",
+    borderRadius: 20,
+    width: '100%',
+    height: 40,
+    alignSelf: "center",
+    alignItems: "center",
+    paddingVertical: 8,
+    marginHorizontal: 8
   },
 });
