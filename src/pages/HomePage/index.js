@@ -1,64 +1,57 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import * as Animatable from 'react-native-animatable';
-import logo from '../../assets/logo.png';
-import { useNavigation } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Conversations from '../Conversations';
+import Search from '../Search';
+import More from '../More';
+import Others from '../Others';
+import Profile from '../Profile';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+
+const Tab = createBottomTabNavigator();
 
 export default function HomePage() {
-    const navigation = useNavigation();
     return (
-      <View style={styles.container}>
-       
-      </View>
+        <Tab.Navigator initialRouteName="Conversas"
+            screenOptions={{
+                tabBarActiveTintColor: '#2B0334',
+            }}>
+            <Tab.Screen name="Conversas" component={Conversations}
+                options={{
+                    tabBarLabel: 'Conversas',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="home" color={color} size={size} />
+                    ),
+                }} />
+            <Tab.Screen name="Procurar" component={Search}
+                options={{
+                    tabBarLabel: 'Procurar',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="magnify" color={color} size={size} />
+                    ),
+                }} />
+            <Tab.Screen name="Mais" component={More}
+                options={{
+                    tabBarLabel: 'Mais',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="hospital-box-outline" color={color} size={size} />
+                    ),
+                }} />
+            <Tab.Screen name="Outros" component={Others}
+                options={{
+                    tabBarLabel: 'Outros',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="dots-horizontal" color={color} size={size} />
+                    ),
+                }} />
+            <Tab.Screen name="Pefil" component={Profile}
+                options={{
+                    tabBarLabel: 'Pefil',
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="account" color={color} size={size} />
+                    ),
+                }} />
+        </Tab.Navigator>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white',
-    },
-    containerLogo: {
-        flex: 2,
-        backgroundColor: 'white',
-    },
-    containerForm: {
-        flex: 1,
-        backgroundColor: '#2B0334',
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        paddingStart: '5%',
-        paddingEnd: '5%'
-    },
-    image: {
-        width: '100%',
-        height: 300,
-        marginTop: 65
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginTop: 28,
-        marginBottom: 12,
-        color: 'white',
-        textAlign: 'center'
-    },
-    text: {
-        color: 'white'
-    },
-    button: {
-        position: 'absolute',
-        backgroundColor: 'white',
-        borderRadius: 50,
-        width: '60%',
-        paddingVertical: 8,
-        alignSelf: 'center',
-        bottom: '15%',
-        alignItems: 'center'
-    },
-    buttonText: {
-        fontSize: 18,
-        color: '#2B0334',
-        fontWeight: 'bold'
-    }
-})

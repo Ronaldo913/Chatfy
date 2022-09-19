@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: 300,
-        marginTop: '29%'
+        marginTop: '13%'
     },
     title: {
         fontSize: 24,

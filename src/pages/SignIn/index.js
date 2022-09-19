@@ -9,6 +9,7 @@ import {
 import * as Animatable from "react-native-animatable";
 import logo from "../../assets/logoName.png";
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 export default function SignIn() {
   const navigation = useNavigation();
@@ -51,10 +52,17 @@ export default function SignIn() {
         <View style={styles.buttonsNetwork}>
           <TouchableOpacity style={styles.buttonNetwork} onPress={ () => navigation.navigate('HomePage')}>
             <Text style={styles.buttonText}>Nosso site</Text>
+            <Icon  name="google" size={20} color='#2B0334' />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.buttonNetwork}>
-            <Text style={styles.registerText}>Instagram</Text>
+            <Text style={styles.registerText}>Instagram</Text> 
+            <Icon  name="instagram" size={20} color='#2B0334' />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.buttonNetwork}>
+            <Text style={styles.registerText}>Google</Text>
+            <Icon  name="google" size={20} color='#2B0334' />
           </TouchableOpacity>
         </View>
       </Animatable.View>
@@ -69,16 +77,15 @@ const styles = StyleSheet.create({
   },
   containerLogo: {
     backgroundColor: "white",
-  },
-  containerHeader: {
-    paddingStart: 12
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
-    width: "65%",
-    height: 300,
+    width: "40%",
+    height: 200,
   },
   message: {
-    fontSize: 30,
+    fontSize: 26,
     fontWeight: "bold",
     // color: "#2B0363",
     color: '#2B0334'
@@ -93,7 +100,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 19,
+    fontSize: 16,
     marginTop: 35,
     marginBottom: 12,
     color: "white",
@@ -101,8 +108,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   title2: {
-    fontSize: 19,
-    marginTop: 7,
+    fontSize: 16,
     marginBottom: 12,
     color: "white",
     marginLeft: 5,
@@ -110,10 +116,10 @@ const styles = StyleSheet.create({
   },
   input: {
     borderBottomWidth: 1,
-    height: 45,
+    height: 40,
     marginBottom: 12,
     fontSize: 16,
-    color: "grey",
+    color: "black",
     backgroundColor: "white",
     borderRadius: 20,
     paddingHorizontal: 12,
@@ -159,6 +165,7 @@ const styles = StyleSheet.create({
     marginTop: '6%'
   },
   buttonNetwork: {
+    flexDirection: "row",
     backgroundColor: "white",
     borderRadius: 20,
     width: '100%',
@@ -166,6 +173,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     paddingVertical: 8,
-    marginHorizontal: 8
+    marginHorizontal: 8,
+    justifyContent: 'space-between',
+    padding: 10
   },
 });
