@@ -1,10 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import CardPeople from '../CardPeople';
+import { View, Text, StyleSheet } from 'react-native';
+
 
 export default function Conversations() {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Conversas!</Text>
+        <View style={styles.container}>
+            <CardPeople name="Lula" />
+            <CardPeople name="Inacio" />
+            <CardPeople name="Dilma" />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1, 
+        justifyContent: 'flex-start', 
+        alignItems: 'flex-start', 
+        backgroundColor: 'white'
+    },
+  })
