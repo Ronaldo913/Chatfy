@@ -7,7 +7,6 @@ import Search from '../Search';
 import More from '../More';
 import Others from '../Others';
 import Profile from '../Profile';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 

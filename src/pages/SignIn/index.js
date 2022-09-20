@@ -10,6 +10,7 @@ import * as Animatable from "react-native-animatable";
 import logo from "../../assets/logoName.png";
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function SignIn() {
   const navigation = useNavigation();
@@ -39,32 +40,42 @@ export default function SignIn() {
         <TextInput placeholder="Digite uma senha..." style={styles.input} />
 
         <View style={styles.buttons}>
-          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('HomePage')}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomePage')}>
             <Text style={styles.buttonText}>Acessar</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.buttonRegister}>
             <Text style={styles.registerText}>Cadastrar</Text>
           </TouchableOpacity>
-          
+
         </View>
 
         <View style={styles.buttonsNetwork}>
-          <TouchableOpacity style={styles.buttonNetwork} onPress={ () => navigation.navigate('HomePage')}>
-            <Text style={styles.buttonText}>Nosso site</Text>
-            <Icon  name="google" size={20} color='#2B0334' />
-          </TouchableOpacity>
+          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.buttonNetwork}>
+            <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
+    alignItems: "center", }}>
+              <Text style={styles.registerText}>Nosso site</Text>
+              <Icon name="google" size={20} color='#2B0334' />
+            </TouchableOpacity>
+          </LinearGradient>
 
-          <TouchableOpacity style={styles.buttonNetwork}>
-            <Text style={styles.registerText}>Instagram</Text> 
-            <Icon  name="instagram" size={20} color='#2B0334' />
-          </TouchableOpacity>
+          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.buttonNetwork}>
+            <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
+    alignItems: "center", }}>
+              <Text style={styles.registerText}>Google</Text>
+              <Icon name="instagram" size={20} color='#2B0334' />
+            </TouchableOpacity>
+          </LinearGradient>
 
-          <TouchableOpacity style={styles.buttonNetwork}>
-            <Text style={styles.registerText}>Google</Text>
-            <Icon  name="google" size={20} color='#2B0334' />
-          </TouchableOpacity>
+          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.buttonNetwork}>
+            <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
+    alignItems: "center", }}>
+              <Text style={styles.registerText}>Google</Text>
+              <Icon name="google" size={20} color='#2B0334' />
+            </TouchableOpacity>
+          </LinearGradient>
         </View>
+
       </Animatable.View>
     </View>
   );
