@@ -45,33 +45,42 @@ export default function SignIn() {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.buttonRegister}>
-            <Text style={styles.registerText}>Cadastrar</Text>
+            <Text style={styles.buttonText}>Cadastrar</Text>
           </TouchableOpacity>
 
         </View>
 
         <View style={styles.buttonsNetwork}>
-          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.buttonNetwork}>
-            <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
-    alignItems: "center", }}>
+          <LinearGradient start={{ x: 0.0, y: 0.25 }} end={{ x: 0.5, y: 1.0 }}
+            locations={[0, 0.5, 0.6]} colors={['#ff5597', '#a41c56']} style={styles.buttonNetwork}>
+            <TouchableOpacity style={{
+              flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
+              alignItems: "center",
+            }}>
               <Text style={styles.registerText}>Nosso site</Text>
-              <Icon name="google" size={20} color='#2B0334' />
+              <Icon name="google" size={20} color='#fff' />
             </TouchableOpacity>
           </LinearGradient>
 
-          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.buttonNetwork}>
-            <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
-    alignItems: "center", }}>
+          <LinearGradient start={{ x: 0.6, y: 0.5 }} end={{ x: 0.0, y: 0.9 }}
+            locations={[0, 0.6, 1]} colors={['#800080', '#F92B7F', '#F58524']} style={styles.buttonNetwork}>
+            <TouchableOpacity style={{
+              flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
+              alignItems: "center",
+            }}>
               <Text style={styles.registerText}>Google</Text>
-              <Icon name="instagram" size={20} color='#2B0334' />
+              <Icon name="instagram" size={20} color='#fff' />
             </TouchableOpacity>
           </LinearGradient>
 
-          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.buttonNetwork}>
-            <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
-    alignItems: "center", }}>
+          <LinearGradient start={{ x: 0.6, y: 0.5 }} end={{ x: 0.0, y: 0.9 }}
+            locations={[0, 0.6, 1]} colors={['#800000', '#8b0000']} style={styles.buttonNetwork}>
+            <TouchableOpacity style={{
+              flexDirection: 'row', justifyContent: 'space-between', width: '100%', alignSelf: "center",
+              alignItems: "center",
+            }}>
               <Text style={styles.registerText}>Google</Text>
-              <Icon name="google" size={20} color='#2B0334' />
+              <Icon name="google" size={20} color='#fff' />
             </TouchableOpacity>
           </LinearGradient>
         </View>
@@ -164,7 +173,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   registerText: {
-    color: "#2B0334",
+    color: "#fff",
     fontSize: 16,
     fontWeight: "bold",
   },
