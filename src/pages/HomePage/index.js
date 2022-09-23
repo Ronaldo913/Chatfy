@@ -2,10 +2,11 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useNavigation } from '@react-navigation/native';
 import Conversations from '../Conversations';
 import Search from '../Search';
 import More from '../More';
-import Others from '../Others';
+import Requests from '../Requests';
 import Profile from '../Profile';
 
 const Tab = createBottomTabNavigator();
@@ -15,7 +16,9 @@ export default function HomePage() {
         <Tab.Navigator initialRouteName="Conversas"
             screenOptions={{
                 tabBarActiveTintColor: '#2B0334',
-            }}>
+            }}
+            
+            >
             <Tab.Screen name="Conversas" component={Conversations}
                 options={{
                     tabBarLabel: 'Conversas',
@@ -37,11 +40,11 @@ export default function HomePage() {
                         <MaterialCommunityIcons name="hospital-box-outline" color={color} size={size} />
                     ),
                 }} />
-            <Tab.Screen name="Outros" component={Others}
+            <Tab.Screen name="Solicitações" component={Requests}
                 options={{
-                    tabBarLabel: 'Outros',
+                    tabBarLabel: 'Solicitações',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="dots-horizontal" color={color} size={size} />
+                        <MaterialCommunityIcons name="account-multiple-plus-outline" color={color} size={size} />
                     ),
                 }} />
             <Tab.Screen name="Pefil" component={Profile}

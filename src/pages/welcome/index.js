@@ -32,11 +32,11 @@ export default function Welcome() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: 'white'
     },
     containerLogo: {
         flex: 2,
-        backgroundColor: 'white',
+        backgroundColor: 'white'
     },
     containerForm: {
         flex: 1,
