@@ -4,8 +4,7 @@ import * as Animatable from 'react-native-animatable';
 import logo from '../../assets/logo.png';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Welcome() {
-    const navigation = useNavigation();
+export default function Welcome( {navigation} ) {
     return (
         <View style={styles.container}>
             <View style={styles.containerLogo}>

@@ -12,8 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function SignIn() {
-  const navigation = useNavigation();
+export default function SignIn( {navigation} ) {
   return (
     <View style={styles.container}>
       <View style={styles.containerLogo}>
@@ -39,12 +38,18 @@ export default function SignIn() {
         <Text style={styles.title2}>Senha</Text>
         <TextInput placeholder="Digite uma senha..." style={styles.input} />
 
+        <TouchableOpacity onPress={() => navigation.navigate('HomePage')}>
+          <Text style={{ color: 'white' }} >Esqueceu senha?</Text>
+        </TouchableOpacity>
+
+
+
         <View style={styles.buttons}>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomePage')}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DrawerRoute')}>
             <Text style={styles.buttonText}>Acessar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.buttonRegister}>
+          <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Registration')}>
             <Text style={styles.buttonText}>Cadastrar</Text>
           </TouchableOpacity>
 
@@ -182,7 +187,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     flex: 1,
     height: '100%',
-    marginTop: '6%'
+    marginTop: '10%',
+    paddingTop: '7%'
   },
   buttonNetwork: {
     flexDirection: "row",
