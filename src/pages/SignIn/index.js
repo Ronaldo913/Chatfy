@@ -152,7 +152,8 @@ const styles = StyleSheet.create({
   buttons: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 20
+    marginTop: 20,
+    flex: 0
   },
   button: {
     backgroundColor: "white",
@@ -198,9 +199,7 @@ const styles = StyleSheet.create({
     height: 40,
     alignSelf: "center",
     alignItems: "center",
-    paddingVertical: 8,
-    marginHorizontal: 8,
     justifyContent: 'space-between',
-    padding: 10
+    padding: 10,
   },
 });

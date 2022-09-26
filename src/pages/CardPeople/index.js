@@ -6,7 +6,6 @@ import logo from '../../assets/lula.png';
 
 export default function CardPeople( props ) {
   return (
-    
     <TouchableOpacity style={styles.container}>
       <View style={styles.containerLogo}>
         <Animatable.Image
@@ -22,11 +21,9 @@ export default function CardPeople( props ) {
         </View>
       </View>
 
-
-      <View>
+      <View style={styles.text}>
         <Text style={styles.textColor}>10/09/2022</Text>
       </View>
-
 
     </TouchableOpacity>
   );
@@ -42,6 +39,7 @@ const styles = StyleSheet.create({
     paddingRight: 13,
     paddingVertical: 10,
     justifyContent: 'space-between',
+
   },
   image: {
     width: 47,
@@ -54,7 +52,8 @@ const styles = StyleSheet.create({
   },        
   text: {
     justifyContent: 'space-between',
-    marginLeft: 20
+    marginLeft: 20,
+    width: '30%'
   },
   textColor: {
     color: '#2B0334'

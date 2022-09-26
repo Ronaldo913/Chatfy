@@ -1,10 +1,24 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import CardRequest from '../CardRequest';
 
 export default function Requests() {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Solicitações!</Text>
+        <View style={styles.container}>
+            <CardRequest name="Ronaldo Noberto" />
+            <CardRequest name="Ronaldo Noberto" />
+            <CardRequest name="Ronaldo Noberto" />
+            <CardRequest name="Ronaldo Noberto" />
+            <CardRequest name="Ronaldo Noberto" />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      backgroundColor: 'white'
+    },
+  })
