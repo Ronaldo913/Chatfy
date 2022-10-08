@@ -46,11 +46,11 @@ export default function HomePage() {
                         <MaterialCommunityIcons name="account-multiple-plus-outline" color={color} size={size} />
                     ),
                 }} />
-            <Tab.Screen name="Pefil" component={Profile} 
+            <Tab.Screen name="Música" component={Profile} 
                 options={{
-                    tabBarLabel: 'Pefil', headerTitle: () =>  titleFormat("Pefil"),
+                    tabBarLabel: 'Música', headerTitle: () =>  titleFormat("Música"),
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="account" color={color} size={size} />
+                        <MaterialCommunityIcons name="music" color={color} size={size} />
                     ),
                 }} />
         </Tab.Navigator>
