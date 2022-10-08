@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import CardRequest from '../../components/CardRequest';
+import { View, StyleSheet } from 'react-native';
+import CardRequest from '../../../components/CardRequest';
 
 export default function Requests() {
     return (
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
       alignItems: 'flex-start',
       backgroundColor: 'white'
     },
-  })
+})

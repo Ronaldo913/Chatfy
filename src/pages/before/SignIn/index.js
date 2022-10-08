@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import * as Animatable from "react-native-animatable";
 import logo from "../../assets/logoName.png";
-import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { LinearGradient } from 'expo-linear-gradient';
 

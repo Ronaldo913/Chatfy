@@ -6,7 +6,7 @@ import Conversations from '../Conversations';
 import Search from '../Search';
 import More from '../More';
 import Requests from '../Requests';
-import Profile from '../Profile';
+import Profile from '../../homeSidebar/Profile';
 
 const Tab = createBottomTabNavigator();
 
